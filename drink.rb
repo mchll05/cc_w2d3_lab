@@ -7,4 +7,5 @@ attr_reader :name, :price
     @price = drink_price
 end
 
+
 end

@@ -12,4 +12,8 @@ def test_drink_name()
   assert_equal("Singapore Sling", @a_drink.name)
   end
 
+def test_drink_price
+  assert_equal(5, @a_drink.price)
+end
+
 end
