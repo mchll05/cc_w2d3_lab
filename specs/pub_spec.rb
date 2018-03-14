@@ -16,7 +16,7 @@ class PubTest < MiniTest::Test
     # ]
     #
     # @drink = [yummy_drinks]
-    @customer = Customer.new("Judy", 20)
+    @a_customer = Customer.new("Long John Silver", 20, 19, 5)
 
   end
 
@@ -31,6 +31,16 @@ end
 def test_add_to_till
   @pub.add_to_till
   assert_equal(55, @pub.till)
+end
+
+def test_legal_drink_age
+  result = @pub.legal_drink_age?(@a_customer)
+  assert_equal(true, result)
+end
+
+def test_can_customer_drink_more
+  result = @pub.can_customer_drink_more?(@a_customer)
+  assert_equal("Another sir?", result)
 end
 
 end
